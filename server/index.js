@@ -119,7 +119,13 @@ function getRelevantContext(query) {
 
 app.post('/api/chat', async (req, res) => {
 
+    let conversationHistory = "";
+
     const { message } = req.body;
+
+    conversationHistory += `
+    Usuario: ${message}
+    `;
 
     const context = getRelevantContext(message);
 
@@ -139,6 +145,9 @@ app.post('/api/chat', async (req, res) => {
     
     CONTEXTO:
     ${context}
+
+    HISTORIAL:
+    ${conversationHistory}
     
     PREGUNTA:
     ${message}
