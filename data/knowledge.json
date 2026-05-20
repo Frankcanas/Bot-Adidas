@@ -1,38 +1,98 @@
 [
   {
+    "id": 1,
     "categoria": "Envíos",
     "preguntas": [
       "¿Cuánto tarda el envío?",
-      "¿Cuál es el costo de entrega?"
+      "¿Cuándo llega mi pedido?",
+      "¿Cuánto demora la entrega?",
+      "¿Hacen envíos nacionales?"
     ],
-    "contenido": "En Adidas Colombia, los envíos a ciudades principales (Bogotá, Medellín, Cali) tardan de 2 a 5 días hábiles. Para el resto del país, entre 3 y 10 días. El costo es gratuito por compras superiores a $250.000 COP. Si el pedido es menor, el costo estándar es de $10.000 COP.",
+    "keywords": [
+      "envio",
+      "entrega",
+      "pedido",
+      "demora",
+      "tiempo",
+      "domicilio"
+    ],
+    "contenido": "\nEn Adidas Colombia los envíos a ciudades principales como Bogotá,\nMedellín y Cali tardan entre 2 y 5 días hábiles.\n\nPara otras ciudades o municipios, el tiempo estimado es de 3 a 10 días hábiles.\n\nEl envío es gratuito para compras superiores a $250.000 COP.\nPara compras inferiores, el costo estándar es de $10.000 COP.\n        ",
     "fuente": "https://www.adidas.co/ayuda/envio"
   },
   {
+    "id": 2,
     "categoria": "Devoluciones",
     "preguntas": [
-      "¿Cómo devuelvo un producto?",
-      "¿Cuántos días tengo para cambios?"
+      "¿Cómo hago una devolución?",
+      "¿Puedo cambiar un producto?",
+      "¿Cuántos días tengo para devolver?",
+      "¿Dónde entrego una devolución?"
     ],
-    "contenido": "Cuentas con 60 días calendario desde la recepción de tu pedido para devoluciones gratuitas. Debes generar una guía en la sección 'Mis Pedidos' y llevar el paquete a un punto Servientrega. Los productos de la línea Yeezy o colaboraciones especiales tienen políticas de devolución de solo 7 días.",
+    "keywords": [
+      "devolucion",
+      "cambio",
+      "garantia",
+      "devolver",
+      "reembolso"
+    ],
+    "contenido": "\nLas devoluciones en Adidas Colombia son gratuitas.\n\nTienes hasta 60 días calendario desde la recepción del pedido para solicitar cambios o devoluciones.\n\nDebes ingresar a la sección \"Mis Pedidos\", generar una guía de devolución\ny entregar el paquete en un punto Servientrega autorizado.\n\nLos productos Yeezy y colaboraciones especiales tienen únicamente 7 días para devolución.\n        ",
     "fuente": "https://www.adidas.co/ayuda/devoluciones"
   },
   {
+    "id": 3,
     "categoria": "Pagos",
     "preguntas": [
       "¿Qué medios de pago aceptan?",
-      "¿Puedo pagar con PSE?"
+      "¿Puedo pagar con PSE?",
+      "¿Aceptan tarjetas?",
+      "¿Se puede pagar contra entrega?"
     ],
-    "contenido": "Aceptamos tarjetas de crédito Visa, Mastercard y American Express. También pagos por PSE, Efecty y pago contra entrega en ciudades seleccionadas. No aceptamos cheques ni transferencias directas fuera de la plataforma oficial.",
+    "keywords": [
+      "pago",
+      "pse",
+      "tarjeta",
+      "visa",
+      "mastercard",
+      "efecty"
+    ],
+    "contenido": "\nAdidas Colombia acepta pagos con tarjetas Visa,\nMastercard y American Express.\n\nTambién puedes pagar mediante PSE,\nEfecty y pago contra entrega en ciudades seleccionadas.\n\nNo se aceptan cheques ni transferencias manuales fuera de la plataforma oficial.\n        ",
     "fuente": "https://www.adidas.co/ayuda/pagos"
   },
   {
+    "id": 4,
     "categoria": "Productos",
     "preguntas": [
-      "¿Son originales?",
-      "¿Dónde se fabrican?"
+      "¿Los productos son originales?",
+      "¿Dónde fabrican los productos?",
+      "¿La ropa es original?",
+      "¿El calzado es auténtico?"
     ],
-    "contenido": "Todos nuestros productos vendidos en adidas.co son 100% originales. La mayoría de nuestro calzado se fabrica en Vietnam e Indonesia bajo estrictos estándares de calidad internacional de la marca alemana.",
+    "keywords": [
+      "original",
+      "autentico",
+      "producto",
+      "calzado",
+      "ropa"
+    ],
+    "contenido": "\nTodos los productos vendidos en adidas.co son 100% originales.\n\nLa mayoría del calzado y ropa deportiva es fabricada en países\ncomo Vietnam, Indonesia y China bajo estándares internacionales de calidad.\n\nAdidas garantiza autenticidad en todos los productos vendidos\ndesde la tienda oficial.\n        ",
     "fuente": "https://www.adidas.co/productos-info"
+  },
+  {
+    "id": 5,
+    "categoria": "Cuenta",
+    "preguntas": [
+      "¿Cómo creo una cuenta?",
+      "¿Necesito registrarme?",
+      "¿Cómo inicio sesión?"
+    ],
+    "keywords": [
+      "cuenta",
+      "registro",
+      "usuario",
+      "login",
+      "sesion"
+    ],
+    "contenido": "\nPuedes crear una cuenta gratuita en Adidas Colombia\nusando tu correo electrónico.\n\nTener una cuenta te permite rastrear pedidos,\nguardar productos favoritos y acceder a promociones exclusivas.\n        ",
+    "fuente": "https://www.adidas.co/account-register"
   }
 ]

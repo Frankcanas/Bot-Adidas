@@ -1,36 +1,166 @@
+
 const fs = require('fs');
 const path = require('path');
 
+// Base de conocimiento simulada para el MVP
 const mockData = [
     {
+        id: 1,
         categoria: "Envíos",
-        preguntas: ["¿Cuánto tarda el envío?", "¿Cuál es el costo de entrega?"],
-        contenido: "En Adidas Colombia, los envíos a ciudades principales (Bogotá, Medellín, Cali) tardan de 2 a 5 días hábiles. Para el resto del país, entre 3 y 10 días. El costo es gratuito por compras superiores a $250.000 COP. Si el pedido es menor, el costo estándar es de $10.000 COP.",
+        preguntas: [
+            "¿Cuánto tarda el envío?",
+            "¿Cuándo llega mi pedido?",
+            "¿Cuánto demora la entrega?",
+            "¿Hacen envíos nacionales?"
+        ],
+        keywords: [
+            "envio",
+            "entrega",
+            "pedido",
+            "demora",
+            "tiempo",
+            "domicilio"
+        ],
+        contenido: `
+En Adidas Colombia los envíos a ciudades principales como Bogotá,
+Medellín y Cali tardan entre 2 y 5 días hábiles.
+
+Para otras ciudades o municipios, el tiempo estimado es de 3 a 10 días hábiles.
+
+El envío es gratuito para compras superiores a $250.000 COP.
+Para compras inferiores, el costo estándar es de $10.000 COP.
+        `,
         fuente: "https://www.adidas.co/ayuda/envio"
     },
+
     {
+        id: 2,
         categoria: "Devoluciones",
-        preguntas: ["¿Cómo devuelvo un producto?", "¿Cuántos días tengo para cambios?"],
-        contenido: "Cuentas con 60 días calendario desde la recepción de tu pedido para devoluciones gratuitas. Debes generar una guía en la sección 'Mis Pedidos' y llevar el paquete a un punto Servientrega. Los productos de la línea Yeezy o colaboraciones especiales tienen políticas de devolución de solo 7 días.",
+        preguntas: [
+            "¿Cómo hago una devolución?",
+            "¿Puedo cambiar un producto?",
+            "¿Cuántos días tengo para devolver?",
+            "¿Dónde entrego una devolución?"
+        ],
+        keywords: [
+            "devolucion",
+            "cambio",
+            "garantia",
+            "devolver",
+            "reembolso"
+        ],
+        contenido: `
+Las devoluciones en Adidas Colombia son gratuitas.
+
+Tienes hasta 60 días calendario desde la recepción del pedido para solicitar cambios o devoluciones.
+
+Debes ingresar a la sección "Mis Pedidos", generar una guía de devolución
+y entregar el paquete en un punto Servientrega autorizado.
+
+Los productos Yeezy y colaboraciones especiales tienen únicamente 7 días para devolución.
+        `,
         fuente: "https://www.adidas.co/ayuda/devoluciones"
     },
+
     {
+        id: 3,
         categoria: "Pagos",
-        preguntas: ["¿Qué medios de pago aceptan?", "¿Puedo pagar con PSE?"],
-        contenido: "Aceptamos tarjetas de crédito Visa, Mastercard y American Express. También pagos por PSE, Efecty y pago contra entrega en ciudades seleccionadas. No aceptamos cheques ni transferencias directas fuera de la plataforma oficial.",
+        preguntas: [
+            "¿Qué medios de pago aceptan?",
+            "¿Puedo pagar con PSE?",
+            "¿Aceptan tarjetas?",
+            "¿Se puede pagar contra entrega?"
+        ],
+        keywords: [
+            "pago",
+            "pse",
+            "tarjeta",
+            "visa",
+            "mastercard",
+            "efecty"
+        ],
+        contenido: `
+Adidas Colombia acepta pagos con tarjetas Visa,
+Mastercard y American Express.
+
+También puedes pagar mediante PSE,
+Efecty y pago contra entrega en ciudades seleccionadas.
+
+No se aceptan cheques ni transferencias manuales fuera de la plataforma oficial.
+        `,
         fuente: "https://www.adidas.co/ayuda/pagos"
     },
+
     {
+        id: 4,
         categoria: "Productos",
-        preguntas: ["¿Son originales?", "¿Dónde se fabrican?"],
-        contenido: "Todos nuestros productos vendidos en adidas.co son 100% originales. La mayoría de nuestro calzado se fabrica en Vietnam e Indonesia bajo estrictos estándares de calidad internacional de la marca alemana.",
+        preguntas: [
+            "¿Los productos son originales?",
+            "¿Dónde fabrican los productos?",
+            "¿La ropa es original?",
+            "¿El calzado es auténtico?"
+        ],
+        keywords: [
+            "original",
+            "autentico",
+            "producto",
+            "calzado",
+            "ropa"
+        ],
+        contenido: `
+Todos los productos vendidos en adidas.co son 100% originales.
+
+La mayoría del calzado y ropa deportiva es fabricada en países
+como Vietnam, Indonesia y China bajo estándares internacionales de calidad.
+
+Adidas garantiza autenticidad en todos los productos vendidos
+desde la tienda oficial.
+        `,
         fuente: "https://www.adidas.co/productos-info"
+    },
+
+    {
+        id: 5,
+        categoria: "Cuenta",
+        preguntas: [
+            "¿Cómo creo una cuenta?",
+            "¿Necesito registrarme?",
+            "¿Cómo inicio sesión?"
+        ],
+        keywords: [
+            "cuenta",
+            "registro",
+            "usuario",
+            "login",
+            "sesion"
+        ],
+        contenido: `
+Puedes crear una cuenta gratuita en Adidas Colombia
+usando tu correo electrónico.
+
+Tener una cuenta te permite rastrear pedidos,
+guardar productos favoritos y acceder a promociones exclusivas.
+        `,
+        fuente: "https://www.adidas.co/account-register"
     }
 ];
 
+// Crear carpeta data si no existe
 const dataDir = path.join(__dirname, '../data');
-if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir);
 
+if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir);
+}
+
+// Guardar JSON
 const dataPath = path.join(dataDir, 'knowledge.json');
-fs.writeFileSync(dataPath, JSON.stringify(mockData, null, 2));
-console.log("✅ Base de datos 'inventada' generada con éxito en /data/knowledge.json");
+
+fs.writeFileSync(
+    dataPath,
+    JSON.stringify(mockData, null, 2),
+    'utf8'
+);
+
+console.log("✅ Base de conocimiento generada correctamente.");
+console.log(`📁 Archivo creado en: ${dataPath}`);
+console.log(`📦 Total registros: ${mockData.length}`);
