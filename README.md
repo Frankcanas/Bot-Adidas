@@ -36,7 +36,7 @@ node server/index.js
 ### Paso 3: Iniciar el Servidor Frontend (Terminal 2)
 Utilizamos Vite para evitar problemas de seguridad del navegador:
 ```powershell
-npx vite client
+npm run dev
 ```
 *Copia el enlace que te dé (ej: http://localhost:5173) y ábrelo en tu navegador.*
 

@@ -23,8 +23,13 @@ async function handleSendMessage() {
     typingIndicator.innerHTML = '<strong>Adidas Bot:</strong> <p>Escribiendo...</p>';
     chatContainer.appendChild(typingIndicator);
 
+    const API_URL =
+    window.location.hostname.includes("github.dev")
+    ? "https://literate-xylophone-69665v5w7ggx25xp5-3000.app.github.dev"
+    : "http://localhost:3000";
+
     try {
-        const response = await fetch('http://localhost:3000/api/chat', {
+        const response = await fetch(`${API_URL}/api/chat`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

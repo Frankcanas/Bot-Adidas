@@ -90,7 +90,11 @@
       "registro",
       "usuario",
       "login",
-      "sesion"
+      "sesion",
+      "iniciar",
+      "registrar",
+      "correo",
+      "acceso"
     ],
     "contenido": "\nPuedes crear una cuenta gratuita en Adidas Colombia\nusando tu correo electrónico.\n\nTener una cuenta te permite rastrear pedidos,\nguardar productos favoritos y acceder a promociones exclusivas.\n        ",
     "fuente": "https://www.adidas.co/account-register"
