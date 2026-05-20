@@ -34,21 +34,30 @@ function getRelevantContext(query) {
         .filter(w => w.length > 2);
 
     const synonymMap = {
-        demora: "envio",
-        tarda: "envio",
-        llega: "envio",
-        entrega: "envio",
+    demora: "envio",
+    tarda: "envio",
+    llega: "envio",
+    entrega: "envio",
 
-        devolver: "devolucion",
-        cambio: "devolucion",
-        garantia: "devolucion",
+    devolver: "devolucion",
+    cambio: "devolucion",
+    garantia: "devolucion",
+    garantiaa: "devolucion",
 
-        pagar: "pago",
-        tarjeta: "pago",
-        pse: "pago",
+    pagar: "pago",
+    tarjeta: "pago",
+    pse: "pago",
 
-        original: "producto",
-        autentico: "producto"
+    original: "producto",
+    autentico: "producto",
+
+    cuenta: "cuenta",
+    registrarme: "cuenta",
+    registro: "cuenta",
+    iniciar: "cuenta",
+    sesion: "cuenta",
+    login: "cuenta",
+    acceso: "cuenta"
     };
 
     keywords = keywords.flatMap(word => {
@@ -118,31 +127,24 @@ app.post('/api/chat', async (req, res) => {
     console.log(context);
 
     const prompt = `
-Eres un asistente virtual experto en atención al cliente de Adidas Colombia.
-
-Tu personalidad es:
-- amable,
-- profesional,
-- útil,
-- conversacional.
-
-INSTRUCCIONES:
-- Si el CONTEXTO contiene información útil, úsala para responder.
-- Si el CONTEXTO no tiene suficiente información, responde usando tu conocimiento general como asistente de Adidas.
-- Nunca digas que eres una IA.
-- Nunca menciones el contexto.
-- Responde de forma natural y resumida.
-- No copies literalmente el texto.
-- Mantén respuestas cortas y claras.
-
-CONTEXTO:
-${context}
-
-PREGUNTA DEL CLIENTE:
-${message}
-
-RESPUESTA:
-`;
+    Eres un asistente virtual de Adidas Colombia.
+    
+    INSTRUCCIONES IMPORTANTES:
+    - Responde únicamente usando la información del contexto cuando exista.
+    - NO inventes botones, enlaces o funciones que no estén en el contexto.
+    - Si el contexto tiene información parcial, responde solo con eso.
+    - Si no existe contexto suficiente, responde de forma general y breve.
+    - Sé natural y amable.
+    - No repitas saludos en cada mensaje.
+    
+    CONTEXTO:
+    ${context}
+    
+    PREGUNTA:
+    ${message}
+    
+    RESPUESTA:
+    `;
 
     try {
 
