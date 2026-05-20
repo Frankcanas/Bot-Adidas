@@ -3,10 +3,10 @@
     "id": 1,
     "categoria": "Envíos",
     "preguntas": [
-      "¿Cuánto tarda el envío?",
-      "¿Cuándo llega mi pedido?",
-      "¿Cuánto demora la entrega?",
-      "¿Hacen envíos nacionales?"
+      "Cuánto tarda el envío",
+      "Cuándo llega mi pedido",
+      "Cuánto demora la entrega",
+      "Hacen envíos nacionales"
     ],
     "keywords": [
       "envio",
@@ -23,10 +23,10 @@
     "id": 2,
     "categoria": "Devoluciones",
     "preguntas": [
-      "¿Cómo hago una devolución?",
-      "¿Puedo cambiar un producto?",
-      "¿Cuántos días tengo para devolver?",
-      "¿Dónde entrego una devolución?"
+      "Cómo hago una devolución",
+      "Puedo cambiar un producto",
+      "Cuántos días tengo para devolver",
+      "Dónde entrego una devolución"
     ],
     "keywords": [
       "devolucion",
@@ -42,10 +42,10 @@
     "id": 3,
     "categoria": "Pagos",
     "preguntas": [
-      "¿Qué medios de pago aceptan?",
-      "¿Puedo pagar con PSE?",
-      "¿Aceptan tarjetas?",
-      "¿Se puede pagar contra entrega?"
+      "Qué medios de pago aceptan",
+      "Puedo pagar con PSE",
+      "Aceptan tarjetas",
+      "Se puede pagar contra entrega"
     ],
     "keywords": [
       "pago",
@@ -62,10 +62,10 @@
     "id": 4,
     "categoria": "Productos",
     "preguntas": [
-      "¿Los productos son originales?",
-      "¿Dónde fabrican los productos?",
-      "¿La ropa es original?",
-      "¿El calzado es auténtico?"
+      "Los productos son originales",
+      "Dónde fabrican los productos",
+      "La ropa es original",
+      "El calzado es auténtico"
     ],
     "keywords": [
       "original",
@@ -81,9 +81,9 @@
     "id": 5,
     "categoria": "Cuenta",
     "preguntas": [
-      "¿Cómo creo una cuenta?",
-      "¿Necesito registrarme?",
-      "¿Cómo inicio sesión?"
+      "Cómo creo una cuenta",
+      "Necesito registrarme",
+      "Cómo inicio sesión"
     ],
     "keywords": [
       "cuenta",
