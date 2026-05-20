@@ -128,11 +128,15 @@ desde la tienda oficial.
             "¿Cómo inicio sesión?"
         ],
         keywords: [
-            "cuenta",
-            "registro",
-            "usuario",
-            "login",
-            "sesion"
+          "cuenta",
+          "registro",
+          "usuario",
+          "login",
+          "sesion",
+          "iniciar",
+          "registrar",
+          "correo",
+          "acceso"
         ],
         contenido: `
 Puedes crear una cuenta gratuita en Adidas Colombia
