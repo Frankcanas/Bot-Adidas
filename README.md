@@ -38,6 +38,10 @@ Utilizamos Vite para evitar problemas de seguridad del navegador:
 ```powershell
 npm run dev
 ```
+ó
+```powershell
+npx vite --host
+```
 *Copia el enlace que te dé (ej: http://localhost:5173) y ábrelo en tu navegador.*
 
 ### Paso 4: Asegurar Ollama (Terminal 3 o App)
